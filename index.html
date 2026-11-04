@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>DABODABO Offer - DStv Kenya</title>
+    <title>Ultimate Offer - DStv Kenya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -76,6 +76,42 @@
             background: linear-gradient(135deg, #0083CA, #00a8e8);
             border-radius: 8px;
             color: white !important;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* Mobile Menu */
+        .nav-menu.mobile-active {
+            display: flex !important;
         }
         
         /* Hero Section */
@@ -477,6 +513,35 @@
             
             .nav-menu {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 22, 40, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-menu li {
+                width: 100%;
+            }
+            
+            .nav-menu a {
+                display: block;
+                padding: 1rem 2rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .nav-cta {
+                margin: 1rem 2rem;
+                text-align: center;
+                border-bottom: none;
+            }
+            
+            .hamburger {
+                display: flex;
             }
             
             .top-nav {
@@ -525,7 +590,12 @@
     <nav class="top-nav">
         <div class="nav-container">
             <img src="assets/logo.svg" alt="DStv Logo" class="nav-logo">
-            <ul class="nav-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="https://www.dstv.com/en-ke/new-dstv-packages/" target="_blank">Packages</a></li>
                 <li><a href="#cta-section">Offers</a></li>
@@ -551,7 +621,7 @@
                     <h1>DStv Ultimate Package</h1>
                     <p class="subtitle">
                         180+ Channels • F1, MotoGP, Cricket, Tennis, Golf & All Premium Entertainment<br>
-                        Exclusive DABODABO Limited Time Offer!
+                        Exclusive Limited Time Offer!
                     </p>
                 </div>
             </div>
@@ -667,6 +737,37 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('mobile-active');
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('mobile-active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('mobile-active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('mobile-active');
+            }
+        });
+    </script>
     
 </body>
 </html>
