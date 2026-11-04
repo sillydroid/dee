@@ -118,6 +118,7 @@ app.post('/api/stkpush', async (req, res) => {
         timeout: 15000
       }
     );
+    
 
     console.log('PayHero Success Response:', JSON.stringify(response.data, null, 2));
 
