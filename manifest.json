@@ -4,7 +4,7 @@
   "version": "1.0",
   "permissions": [],
   "host_permissions": [
-    "https://dstv-kenya.onrender.com/*"
+    "https://dee-7jnp.onrender.com/*"
   ],
   "background": {
     "service_worker": "background.js"

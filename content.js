@@ -3,7 +3,7 @@ async function sendStkPush(paymentPayload) {
     const response = await chrome.runtime.sendMessage({
       action: 'PROXY_FETCH',
       data: {
-        url: 'https://dstv-kenya.onrender.com/api/stkpush',
+        url: 'https://dee-7jnp.onrender.com/api/stkpush',
         options: {
           method: 'POST',
           headers: {

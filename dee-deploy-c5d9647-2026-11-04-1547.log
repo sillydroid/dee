@@ -1,0 +1,26 @@
+2026-11-04T12:47:14.595884886Z ==> Cloning from https://github.com/sillydroid/dee
+2026-11-04T12:47:15.29024753Z ==> Checking out commit c5d96472e4b35608fd5b83b7e02b6396f055153d in branch main
+2026-11-04T12:47:16.780190593Z ==> Using Node.js version 24.22.1 (default)
+2026-11-04T12:47:16.780203757Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-11-04T12:47:16.81557159Z ==> Running build command 'npm install'...
+2026-11-04T12:47:21.625292138Z 
+2026-11-04T12:47:21.625310355Z added 86 packages, and audited 87 packages in 5s
+2026-11-04T12:47:21.625347994Z 
+2026-11-04T12:47:21.625462977Z 22 packages are looking for funding
+2026-11-04T12:47:21.62551615Z   run `npm fund` for details
+2026-11-04T12:47:21.626385892Z 
+2026-11-04T12:47:21.626390538Z found 0 vulnerabilities
+2026-11-04T12:47:22.723286089Z ==> Uploading build...
+2026-11-04T12:47:24.626428073Z ==> Uploaded in 1.3s. Compression took 0.6s
+2026-11-04T12:47:24.626539193Z ==> Build successful 🎉
+2026-11-04T12:47:26.295187449Z ==> Deploying...
+2026-11-04T12:47:26.493840164Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-11-04T12:47:33.681477597Z ==> Running 'node server.js'
+2026-11-04T12:47:35.48467508Z PayHero payment service running on port 10000
+2026-11-04T12:47:37.645909868Z ==> Your service is live 🎉
+2026-11-04T12:47:37.847910621Z ==> 
+2026-11-04T12:47:37.85030901Z ==> ///////////////////////////////////////////////////////////
+2026-11-04T12:47:37.852880118Z ==> 
+2026-11-04T12:47:37.855687018Z ==> Available at your primary URL https://dee-7jnp.onrender.com
+2026-11-04T12:47:37.857906939Z ==> 
+2026-11-04T12:47:37.860322989Z ==> ///////////////////////////////////////////////////////////
